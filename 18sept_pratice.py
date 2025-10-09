@@ -524,7 +524,7 @@ print sum  and average of the numbers, minimum and maximum number from given num
  Maximum number=5
  """
  
-count =0 
+"""count =0 
 sum =0 
 min_num =None 
 max_num = None 
@@ -546,3 +546,56 @@ if count >0 :
     print("Average=",sum/count) 
     print("Minimum number=",min_num)
     print("Maximum number=",max_num)
+"""
+
+"""
+Write a Python program to compute the greatest common divisor (GCD) of two positive integers.
+ The greatest common divisor (GCD) of two nonzero integers a and b is the greatest positive integer d such that d is a 
+divisor of both a and b; that is, there are integers e and f such that a = de and b = df, and d is the largest such integer. The 
+GCD of a and b is generally denoted gcd(a, b). 
+For example, the greatest common factor of 15 and 10 is 5, since both the numbers can be divided by 5
+
+"""
+"""a= int(input("enter the number  : "))  # 15
+b = int(input("enter the number  : "))  # 10
+
+if a>0 and b > 0 :  #  5   and  0 > 0  
+    while b !=0 :   # 5 ! =0 
+        
+        temp =b   # temp =5 
+        b = a % b   # b = 10 % 5   = 0  
+        a= temp  # a =5  
+    print("GCD :",a)  # 5
+else :
+    print("GCD :",0)  # 0
+"""
+"""
+ Ask the user to enter 10 test scores. Write a program to do the following:
+ a)If user enters score greater than 100, then give warning to user that entered score is more than 100 and take that 
+ input again from user.  b)Print out the highest and lowest scores.
+  c)Print out the average of the scores.  d)Print out the second largest score.
+ e)Drop the two lowest scores and print out the average of the rest of them.
+ Note: Use of Python Data structures like string, list, tuple etc. and their inbuilt function is not allowed.
+ For Ex.
+ If Input is like following:
+ Enter Test Score: 80
+ Enter Test Score: 65
+ Enter Test Score: 98
+ Enter Test Score: 70
+ Enter Test Score: 93
+ Enter Test Score: 130
+ Entered score is more than hundred, so enter again
+ Enter Test Score: 95
+ Enter Test Score: 50
+ Enter Test Score: 40
+ Enter Test Score: 75
+ Enter Test Score: 72
+ Output should be:
+ Highest Score is: 98
+ Lowest Score is: 40
+ Average Test Score is: 73.8
+ Second Largest Score is: 95
+ Average after dropping the two lowest scores: 81.0
+ """
+ 
+a= int(input("enter the number  : "))  

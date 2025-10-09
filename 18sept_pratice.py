@@ -598,4 +598,3 @@ else :
  Average after dropping the two lowest scores: 81.0
  """
  
-a= int(input("enter the number  : "))  

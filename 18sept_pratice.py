@@ -398,6 +398,63 @@ Annual Income of employee is: 1321200.0
 Income Tax to be paid by employee is: 142800.0
 
 """
+
+grade_data ={
+    "A" : {"basic_pay" : 60000 , "other" :8000 },
+    "B" : {"basic_pay" : 50000 , "other" :7000 },
+    "C" : {"basic_pay" : 40000 , "other" :6000 },
+    "D" : {"basic_pay" : 30000 , "other" :5000 },
+    "E" : {"basic_pay" : 20000 , "other" :4000 },
+    "F" : {"basic_pay" : 10000 , "other" :3000 }
+}
+
+grade=input("Enter the grade level (A, B, C, D, E, or F): ") 
+city =input("Enter the city (1 for metro, 2 for tier 2, 3 for tier 3): ")
+
+
+basic = grade_data[grade]["basic_pay"]  
+other = grade_data[grade]["other"]
+
+# cal  allowance : 
+
+if city =='1' :
+    hra = 0.3 * basic
+elif city =='2' :
+    hra = 0.2 * basic
+else :
+    hra = 0.1 * basic
+    
+da = 0.5 * basic
+ta =900
+pf = 0.11 * basic
+professtional_tax =200 
+
+Gross_Pay = basic +hra + da + other + ta - (professtional_tax + pf)
+annual_income = Gross_Pay *12
+
+tax =0 
+if annual_income <= 250000 :
+    tax =0
+elif annual_income <= 500000 :
+    tax = (annual_income-250000) *0.05  
+elif annual_income <= 750000 :
+    tax =(annual_income- 500000) *0.1 + 12500 #250000 * 0.05
+elif annual_income <= 1000000 :
+    tax =(annual_income- 750000) *0.15 + 37500 
+elif annual_income <= 1250000 :
+    tax =(annual_income- 1000000) *0.2 + 75000  #
+elif annual_income <= 1500000 :
+    tax =(annual_income- 1250000) *0.25 + 125000 # 
+    
+else :
+    tax =(annual_income- 1500000) *0.3 + 187500 
+    
+print("Gross Pay of employee is:",Gross_Pay)
+print("Annual Income of employee is:",annual_income)
+print("Income Tax to be paid by employee is:",tax)
+    
+
+
 """
 number = 123 
 sum = 1+2+3 =6 

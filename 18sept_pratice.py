@@ -399,7 +399,7 @@ Income Tax to be paid by employee is: 142800.0
 
 """
 
-grade_data ={
+"""grade_data ={
     "A" : {"basic_pay" : 60000 , "other" :8000 },
     "B" : {"basic_pay" : 50000 , "other" :7000 },
     "C" : {"basic_pay" : 40000 , "other" :6000 },
@@ -453,7 +453,7 @@ print("Gross Pay of employee is:",Gross_Pay)
 print("Annual Income of employee is:",annual_income)
 print("Income Tax to be paid by employee is:",tax)
     
-
+"""
 
 """
 number = 123 
@@ -554,8 +554,8 @@ for i in range(1,5):
 """    
 
 # que  : 181 :PB 
-"""
-num =int(input("enter the number  : "))  # 2
+
+"""num =int(input("enter the number  : "))  # 2
 for i in range(100000 , 1000000)  :# all 6  digits  number  
     mul =1   # 111112  = 1*1*1*1*1*2 =2 
     temp =i 
@@ -654,4 +654,149 @@ else :
  Second Largest Score is: 95
  Average after dropping the two lowest scores: 81.0
  """
- 
+"""import pandas as pd
+
+data = {
+    "ID": [101, 102, 103, 104, 105, 106],
+    "Name": ["Amit", "Neha", "Ravi", "Priya", "Karan", "Divya"],
+    "Age": [23, 27, 21, 29, 25, 24],
+    "Marks": [88, 75, 92, 85, 90, 78],
+    "City": ["Delhi", "Mumbai", "Pune", "Delhi", "Chennai", "Pune"]
+}
+
+df = pd.DataFrame(data)
+print("Original DataFrame:\n", df)
+"""
+# 1. Select specific columns
+# print("\n1️⃣ filter(items=['Name','Marks']):\n", df.filter(items=["Name", "Marks"]))
+
+# 2. Columns containing substring
+# print("\n2️⃣ filter(like='ar'):\n", df.filter(like="ar"))
+
+# 3. Columns matching regex
+# print("\n3️⃣ filter(regex='^A'):\n", df.filter(regex="^A"))
+
+# 4. Select rows by index labels
+# print("\n4️⃣ filter(axis=0, items=[0,3,5]):\n", df.filter(items=[0, 3, 5], axis=0))
+
+# 5. Conditional filtering
+# print("\n5️⃣ df[df['Marks']>85]:\n", df[df["Marks"] > 85])
+
+# 6. Multiple conditions
+# print("\n6️⃣ (Marks>80 & Age<26):\n", df[(df["Marks"] > 80) & (df["Age"] < 26)])
+
+# 7. Using query
+# print("\n7️⃣ query('Marks>85 and Age<28'):\n", df.query("Marks > 85 and Age < 28"))
+
+# 8. Using isin()
+# print("\n8️⃣ City in ['Pune','Delhi']:\n", df[df["City"].isin(["Pune", "Delhi"])])
+
+# 9. loc and iloc
+# print("\n9️⃣ loc (select Name & City):\n", df.loc[:, ["Name", "City"]])
+# print("\n🔟 iloc (first 3 rows, cols 1–3):\n", df.iloc[0:3, 1:4])
+
+
+# w+ , r + , a+ :
+
+"""
+read ==> 
+readline ==>  first line read only 
+readlines ==> all lines read ==> list 
+"""
+
+# r+ : read + write   ==> only exiting file 
+"""
+with  open("utsav.txt","r+") as f :
+    f.write("jaivalshah")  #11 
+    f.seek(0)
+    context =f.read()
+    print(context)
+        
+"""
+
+# #w+ :
+"""with  open("utsav_1.txt","w+") as f :
+    f.write("jaival shah.\n")  
+    f.write("live in ahm.\n")  
+    f.seek(0)
+    context =f.read()
+    print(context)
+
+    f.close()
+"""
+
+# w : new create  file  + write + exiting  file  ==> overwrite 
+
+"""with open("pratham.txt","w") as f :
+    f.write("pratham.\n")
+    f.write("live in ahm.")
+""" 
+
+# w mode  exiting  file  open  : 
+
+"""with  open("pratham.txt","w") as f :
+    f.write("bike lover.\n")
+    f.write("study in lj.\n")
+"""
+# a mode  : append 
+
+"""
+with open("mathiya.txt","a") as f:
+    f.write("best friend name is ram patel.\n")
+    f.write("dushman name is jinang shah.\n")
+"""
+
+"""with open("mathiya.txt","a") as f:
+    f.write("jan jigar utsav\n")
+    f.write("creta lover\n")
+"""
+
+# read mode  : read only 
+
+"""
+with  open("saloni.txt","r") as f :
+    # context = f.read()  # read all context 
+    # context =f.readline()  # only first line read 
+    context =f.readlines()
+    
+    print(context)
+"""
+
+# r+ : read +write  ==> only exiting  file  
+
+"""with open("pratham.txt","r+") as f :
+    f.write("ram")
+    f.write("sita")
+    f.seek(0)
+    con=f.read()
+    print(con)
+"""
+# r and r + ==> 
+
+"""
+                r mode      w mode     a mode      r+      w+      a+ 
+1.new file      no           yes       yes         no      yea      yes 
+2.exiting file  yes          yes+      yes+        yes     yes       yes
+                            overwrite  add         letter  over      add
+                                                  overwrite
+3.read only     yes          no        no          no       no        no
+
+"""
+
+#note :read , readline , readlines works in R mode , R+ mode , A+mode , W+ mode.
+
+# 465 :Write a function cust_data() to ask user to enter their names and age to store data in customer.txt file.
+
+with open("sample.txt", "r") as f:
+    data = f.read()
+
+words = data.split()
+word_count = len(words)
+
+statement_count = 0
+for ch in data:
+    if ch in ".!?":
+        statement_count += 1
+
+print("Total Words:", word_count)
+print("Total Statements:", statement_count)

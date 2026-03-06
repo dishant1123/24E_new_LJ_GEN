@@ -118,7 +118,7 @@ print("model is : ",v.model)
 
 # 4 : constructor overload
 
-class student : 
+"""class student : 
     
     def __init__(self):
         self.name ="yash"
@@ -138,4 +138,96 @@ class student :
 # print(s.name)
 # print(s.age)
 s=student()
+"""
+
+# inheritance  : 
+
+"""
+single  inheritance  : 
+    ex : class student  : 
+        class teacher (student) 
         
+multiple  : 
+    ex : class a 
+         class b 
+        class c(a,b) 
+
+multi level inheritance :
+    ex : class a 
+         class b(a)    ==> b ==>a 
+        class c(b)   ==> c ==> a,b 
+         
+hirechy inheritance : multiple derived class can inherit  from  same base class . 
+    ex : class a 
+         class b(a)
+         class c(a)
+
+hybrid inheritance : it is  combination  of  more than one  inheritance. 
+generally it combination  of  multiple  and  multi level. 
+
+    ex : class a 
+         class b(a)
+         class c(a)
+         class d(b,c)
+
+"""
+# ex : 
+
+'''class student : 
+    """
+    def __init__(self,name,age):
+        self.name =name 
+        self.age=age
+    """
+    def __init__(self):
+        self.name = "yash"
+        self.age =21 
+            
+class teacher(student) :
+    # def __init__(self, name, age,subject):
+    #     # student.__init__(self,name,age)   # base class constructor called 
+    #     super().__init__(name,age)
+    #     self.subject=subject
+        
+    def __init__(self):
+        self.subject ="maths"
+        # super().__init__()
+        # student.__init__(self)
+        
+    def show(self):
+        print("name is : ",self.name)
+        print("age is : ",self.age)
+        print("subject is : ",self.subject)
+        
+t=teacher()
+t.show()
+'''
+
+# encapsulation  : 
+"""
+1.get method  : print private variable 
+2.set method  :  private  variable can modify using set method. 
+"""
+class student : 
+    def __init__(self): 
+        self.__name ="yash" 
+        self.__age=21
+        
+    def get_name(self):
+        return self.__name 
+    
+    def get_age(self):
+        return self.__age
+    
+    def set_name(self,n_name):
+        self.__name=n_name
+        
+s=student()
+print("before using set method .")
+print("name is : ",s.get_name())
+print("age is : ",s.get_age())
+
+print("after using set method .")
+s.set_name("het")
+print("name is : ",s.get_name())
+print("age is : ",s.get_age())

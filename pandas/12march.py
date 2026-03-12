@@ -76,7 +76,7 @@ g=g.fillna(0)
 print(g)
 """
 
-f=pd.Series([234,22,23,24,0.9],index=['ram','maju','mamesh','avan','iya'])
+"""f=pd.Series([234,22,23,24,0.9],index=['ram','maju','mamesh','avan','iya'])
 
 print(f)
 # print(f.sort_values())  # asc to desc 
@@ -84,3 +84,27 @@ print(f)
 
 print(f.sort_index())
 print(f.sort_index(ascending=False))
+"""
+
+# dataframe : 
+
+"""a=pd.DataFrame([
+    [1,"raju",12,90000],
+    [2,"ramesh",13,10000],
+    [3,"ravan",14,11000],
+    [4,"riya",15,12000],
+    [5,"suresh",16,13000]],
+columns=['id','name','age','salary'])
+print(a)
+"""
+b=pd.DataFrame({
+    "name":["raju","ramesh","ravan","riya","suresh"],
+    "age":[12,13,14,15,16],
+    "salary":[90000,10000,11000,12000,13000]
+})
+# print(b)
+# print(b.rename(columns={"name" :"first_name"}))
+b['id'] = range(1,6)
+b['salary'][0] =50000
+b.drop(columns=['salary'],inplace=True)
+print(b)

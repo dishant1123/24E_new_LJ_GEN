@@ -42,14 +42,45 @@ print(e.fillna("90"))
 """
 
 # head,  tail  : 
-e=pd.Series([12,45,99,67,89,90,56,89,133],index=['a','b','c','d','e','f','g','h','i'])
+"""e=pd.Series([12,45,99,67,89,90,56,89,133],index=['a','b','c','d','e','f','g','h','i'])
 
-# print(e)
-# print(e.head(2))  # by default  5 rows 
-# print(e.tail(2))  # by default  5 rows  last 
-# print(e.head(-1))
-# print(e.tail(-1))
-# print(e.tail(-11))
-# print(e.tail(-8))
+print(e)
+print(e.head(2))  # by default  5 rows 
+print(e.tail(2))  # by default  5 rows  last 
+print(e.head(-1))
+print(e.tail(-1))
+print(e.tail(-11))
+print(e.tail(-8))
 print(e.head(-8))
 
+"""
+"""
+f=pd.Series([21,22,23,24,25],index=['ram','raju','ramesh','ravan','riya'])
+print(f)
+print(f.sample(3))
+print(f+1)
+print(f-1)
+print(f*2)
+print(f/2)
+"""
+
+"""g=pd.Series([10,20,30,0,None,40,None,50])
+
+print(g)
+# print(g.isnull())
+# print(g.isnull().sum())
+print(g.notnull())
+print(g.notnull().sum())
+
+g=g.fillna(0)
+print(g)
+"""
+
+f=pd.Series([234,22,23,24,0.9],index=['ram','maju','mamesh','avan','iya'])
+
+print(f)
+# print(f.sort_values())  # asc to desc 
+# print(f.sort_values(ascending=False))  # desc to asc
+
+print(f.sort_index())
+print(f.sort_index(ascending=False))

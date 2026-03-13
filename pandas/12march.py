@@ -106,5 +106,5 @@ b=pd.DataFrame({
 # print(b.rename(columns={"name" :"first_name"}))
 b['id'] = range(1,6)
 b['salary'][0] =50000
-b.drop(columns=['salary'],inplace=True)
+# b.drop(columns=['salary'],inplace=True)
 print(b)

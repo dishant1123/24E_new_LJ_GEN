@@ -43,8 +43,8 @@ task :3 display age > 14  name salary print
 task  :4 display  person   who's name  startwith  'r' 
 """
 
-# b =b.loc[b['age']>14,['name','salary']]
-# print(b)
+b =b.loc[b['age']>14],['name','salary']
+print(b)
 
 # b=b.iloc[(b['age'] >14).values,[0,2]]
 # print(b)

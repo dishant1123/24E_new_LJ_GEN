@@ -28,11 +28,11 @@ axis =0  ==> row
 # u all   s 01,   j 0,1    h d  0 1 3  
 
 
-df=pd.DataFrame({"a":[1,2,np.nan,3,4],"b":[1,5,np.nan,2,1]})
-df.drop_duplicates(subset="b",inplace=True)
-df.dropna(inplace=True)
-df.fillna(20,inplace=True)
-print(df.shape)
+# df=pd.DataFrame({"a":[1,2,np.nan,3,4],"b":[1,5,np.nan,2,1]})
+# df = df.drop_duplicates(subset="b")
+# df.dropna()
+# df.fillna(20,inplace=True)
+# print(df.shape[1])
 # print(df)
 
 # 2 : csv read ,sort_values , filter ==> lambda ,

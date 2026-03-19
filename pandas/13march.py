@@ -28,14 +28,13 @@ b=pd.DataFrame({
     "salary":[90000,10000,11000,12000,13000]
 })
 print(b)
-
 # print(b.loc[0])
 # print(b.iloc[0])
 
 # print(b.loc[1 :4])  # last included 
 # print(b.iloc[1 :4])  # last excluded 
 # print(b.iloc[1:4,1:3])
-# print(b.loc[1:4,["name" , 'salary']])
+# print(b.loc[1:4,"name":"salary"])
 
 # print(b.iloc[[0,2,3],[1,2]])
 

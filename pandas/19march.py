@@ -61,7 +61,7 @@ print(result)
 
 """
 
-df = pd.read_csv("pandas\mckinsey.csv")
+"""df = pd.read_csv("pandas\mckinsey.csv")
 print(df)
 print(df.isnull().sum())
-
+"""

@@ -35,8 +35,8 @@ print(result)
 # result =users.merge(msgs)
 # print(result)
 
-users.rename(columns={'USER_ID':'id'},inplace=True)
-print(users)  # id 
+# users.rename(columns={'USER_ID':'id'},inplace=True)
+# print(users)  # id 
 # result =users.merge(msgs)  # it give  error  bcz  not match col name . 
 
 # result = users.merge(msgs,left_on='id',right_on='USER_ID')
@@ -61,7 +61,7 @@ print(users)  # id
 2  2.0  Mary        2  how are you
 3  NaN   NaN        4          bye
 """
-result = users.merge(msgs,left_on='id',right_on='USER_ID',how="outer")
+# result = users.merge(msgs,left_on='id',right_on='USER_ID',how="outer")
 """
    id  NAME  USER_ID          MSG
 0  1.0  John      1.0        hello
@@ -70,4 +70,7 @@ result = users.merge(msgs,left_on='id',right_on='USER_ID',how="outer")
 3  3.0   Tom      NaN          NaN
 4  NaN   NaN      4.0          bye
 """
-print(result)
+# print(result)
+
+movies = pd.read_csv("pandas\movies.csv")
+print(movies)

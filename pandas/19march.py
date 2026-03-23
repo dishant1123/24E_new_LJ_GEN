@@ -55,6 +55,7 @@ sql : display department  wise salary  min salary , max salary  , sum salary , a
 """
 # result = df.groupby("department")["salary"].sum()
 # print(result)
+# df.groupby("department")["employees"].count()
 
 """result = df.groupby("department")["salary"].agg(['sum','mean','min','max'])
 print(result)

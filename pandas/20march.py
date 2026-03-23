@@ -20,3 +20,6 @@ print(df.head())
 # print(df)
 
 # year ==2002 , country =='india' ,life_exp (sum):
+
+result = df.loc[(df['continent']=='Asia') & (df['year']==1967)]
+print(result)

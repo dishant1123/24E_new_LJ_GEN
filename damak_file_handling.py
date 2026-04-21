@@ -72,3 +72,56 @@ output  :
     reverse.txt : .mar 
 
 """
+"""
+read +  : read + write  ==> only exiting  file  
+write + : new write create + write  + exiting  file open  ==> overwrite
+append +: new write create + write  + exiting  file open  ==> append 
+
+fseek()  ==> move  curosr  position  in  file
+"""
+
+# ex :6 read mode : exiting  file  + write  +read : 
+
+"""with  open("damak.txt","r+") as f :
+    f.seek(0)
+    f.write("love india.");
+    f.seek(0)
+    
+    context = f.read()
+    print(context)
+    
+    f.close()
+"""
+"""
+old  text : 
+favorite  color  is  blue. ===> 23
+dream to meet nareadra modi.
+
+new text  : 
+
+my name is damak. ==>17 length 
+
+"""
+
+# ex :7 w + mode : 
+
+"""
+with open("damak2.txt","w+")as f : 
+    f.write("my name is damak.\n")
+    f.write("live in ahmedabad.\n")
+    f.write("study  in royal.")
+    f.seek(0)
+    context = f.read()
+    print(context)
+    f.close()
+"""    
+
+# ex : 8 a+ mode : 
+
+with  open("damak2.txt","a+") as f :
+    # f.write("love india.")
+    # f.write("dream to meet nareadra modi.")
+    f.seek(0)
+    context = f.read()
+    print(context)
+    f.close()

@@ -89,7 +89,11 @@ model.fit(x_train, y_train)
 # predict : 
 y_predict =model.predict(x_test)
 
-compare = pd.DataFrame({'actual_salary':y_test,'predict_Salary':y_predict})
+compare = pd.DataFrame({
+    "Years_Experience": x_test['YearsExperience'],
+    "Actual_Salary": y_test,
+    "Predicted_Salary": y_predict
+}).reset_index(drop=True)
 print(compare.head())
 
 

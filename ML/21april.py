@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
-x =np.array([1,2,3,4,5]).reshape(-1,1)
+"""x =np.array([1,2,3,4,5]).reshape(-1,1)
 y= np.array([1,4,9,16,25])
 
 poly = PolynomialFeatures(degree=2)
@@ -40,6 +40,7 @@ plt.plot(x,y,label = "actual data")
 plt.scatter(x,y_pred,label ="predicted data")
 plt.legend()
 plt.show()
+"""
 
 
 
